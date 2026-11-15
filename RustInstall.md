@@ -25,4 +25,7 @@ rustup toolchain list
 
 # 버전 변경
 rustup default 1.82.0
+
+# 해당 폴더만 버전 변경 (.python-version 같은 파일이 생성되지 않고 rustup이 해당 폴더 관리)
+rustup override set 1.82.0
 ```
