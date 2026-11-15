@@ -10,8 +10,11 @@ xcode-select --install
 # $PATH에 ~/.cargo/bin 추가됨
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+# rustc@1.100.0
 rustc --version
+# cargo@1.100.0
 cargo --version
+# rustup@1.29.3 (rustup default로 버전이 변경해도 rustup 버전은 고정)
 rustup --version
 
 # 다른 버전 설치
