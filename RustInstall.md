@@ -50,3 +50,43 @@ rust-version = "1.82"
 ```
 
 * VSCode + rust-analyzer
+
+### rustfmt@1.11.0
+* https://github.com/rust-lang/rustfmt
+* https://rust-lang.github.io/rustfmt/?version=v1.10.0&search=
+```sh
+# rustup에 기본 내장
+rustfmt --version
+
+# 최신 버전 확인
+rustup component add rustfmt
+
+# fmt 체크
+cargo fmt --check
+
+# fmt 수정
+cargo fmt
+```
+
+* rustfmt.toml
+```toml
+# Cargo.toml의 edition
+edition = "2024"
+
+# 기본 들여쓰기와 줄 길이
+tab_spaces = 4
+max_width = 100
+
+# import 정렬
+reorder_imports = true
+```
+
+* .vscode/settings.json (저장과 동시에 fmt 적용)
+```json
+{
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  }
+}
+```
