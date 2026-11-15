@@ -29,3 +29,22 @@ rustup default 1.82.0
 # 해당 폴더만 버전 변경 (.python-version 같은 파일이 생성되지 않고 rustup이 해당 폴더 관리)
 rustup override set 1.82.0
 ```
+
+```sh
+# Rust 프로젝트 만들기
+cargo new rust-study
+cd rust-study
+cargo run
+```
+
+* rust-toolchain.toml (버전 고정)
+```toml
+[toolchain]
+channel = "1.100.0"
+```
+
+* Cargo.toml (최소 버전 지정)
+```toml
+[package]
+rust-version = "1.82"
+```
