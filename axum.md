@@ -16,25 +16,17 @@ cargo add tokio --features full
 
 * src/main.rs
 ```rs
-use axum::{
-    routing::get,
-    Router,
-};
+use axum::{Router, routing::get};
 
 #[tokio::main]
 async fn main() {
-    let app = Router::new()
-        .route("/", get(|| async { "Hello, Axum!" }));
+    let app = Router::new().route("/", get(|| async { "Hello, Axum!" }));
 
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000")
-        .await
-        .unwrap();
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
 
     println!("Server running on http://localhost:3000");
 
-    axum::serve(listener, app)
-        .await
-        .unwrap();
+    axum::serve(listener, app).await.unwrap();
 }
 ```
 
