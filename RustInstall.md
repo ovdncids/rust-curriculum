@@ -48,3 +48,5 @@ channel = "1.100.0"
 [package]
 rust-version = "1.82"
 ```
+
+* VSCode + rust-analyzer
